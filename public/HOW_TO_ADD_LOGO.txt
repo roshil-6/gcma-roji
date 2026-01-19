@@ -1,0 +1,27 @@
+IMPORTANT: How to Add Your Logo Image
+
+The image file should be placed DIRECTLY in the "public" folder, NOT in a subfolder.
+
+CORRECT:
+  public/
+    └── logo_statue.png  ← Image file goes here directly
+
+WRONG:
+  public/
+    └── logo_statue.png/  ← Don't create a folder with this name
+        └── WhatsApp Image...jpeg  ← Don't put it inside a folder
+
+STEPS:
+1. Open the "public" folder
+2. Place your image file directly in this folder
+3. Name it exactly: logo_statue.png
+   (Even if it's a .jpeg file, you can rename it to .png - browsers will still display it)
+
+If your file is currently in a subfolder:
+- Move it out of the subfolder
+- Place it directly in the "public" folder
+- Name it "logo_statue.png"
+
+After placing the file:
+- Refresh your browser (Ctrl+F5 or Cmd+Shift+R for hard refresh)
+- The logo should appear in the Hero section
