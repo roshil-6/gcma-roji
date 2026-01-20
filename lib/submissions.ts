@@ -14,6 +14,7 @@ export type SubmissionType =
   | 'education-support'
   | 'bts-student'
   | 'bts-tutor'
+  | 'contact'
 
 export interface Submission {
   id: string
@@ -80,7 +81,8 @@ export function getSubmissions(type?: SubmissionType): Submission[] {
       'medical-assistance',
       'education-support',
       'bts-student',
-      'bts-tutor'
+      'bts-tutor',
+      'contact'
     ]
 
     types.forEach(t => {
