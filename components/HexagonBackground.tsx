@@ -20,12 +20,25 @@ export default function HexagonBackground() {
   const animationFrameRef = useRef<number>()
   const lastTimeRef = useRef<number>(0)
   const isMobileRef = useRef(false)
+  const isLightThemeRef = useRef(true)
 
   // Detect mobile device
   useEffect(() => {
     isMobileRef.current = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     ) || window.innerWidth < 768
+  }, [])
+
+  // Track theme changes (light vs dark) so particles stay visible in light theme
+  useEffect(() => {
+    const updateTheme = () => {
+      isLightThemeRef.current = document.body.classList.contains('theme-light')
+    }
+    updateTheme()
+
+    const observer = new MutationObserver(updateTheme)
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] })
+    return () => observer.disconnect()
   }, [])
 
   // Throttled mouse/touch handler
@@ -118,8 +131,12 @@ export default function HexagonBackground() {
         else ctx.lineTo(hx, hy)
       }
       ctx.closePath()
-      ctx.strokeStyle = `rgba(201, 169, 97, ${opacity})`
-      ctx.lineWidth = 1
+      const isLight = isLightThemeRef.current
+      const strokeOpacity = isLight ? Math.min(1, opacity * 2.2) : opacity
+      // Slightly deeper gold in light theme for contrast on cream backgrounds
+      const strokeRgb = isLight ? '164, 119, 35' : '201, 169, 97'
+      ctx.strokeStyle = `rgba(${strokeRgb}, ${strokeOpacity})`
+      ctx.lineWidth = isLight ? 1.25 : 1
       ctx.stroke()
       ctx.restore()
     }

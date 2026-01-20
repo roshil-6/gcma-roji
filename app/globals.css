@@ -7,6 +7,13 @@
   --gold-bright: #d4af37;
   --black-deep: #0a0a0a;
   --black-glass: rgba(10, 10, 10, 0.7);
+  --light-bg: #f9f6ef;
+  --light-text: #1f1b2d;
+  --light-card: rgba(255, 255, 255, 0.75);
+  --light-card-border: rgba(53, 6, 62, 0.15);
+  --light-input: #f3efe6;
+  --light-input-border: rgba(53, 6, 62, 0.25);
+  --light-placeholder: rgba(53, 6, 62, 0.5);
 }
 
 * {
@@ -28,6 +35,108 @@ body {
   overflow-x: hidden;
 }
 
+/* Light Theme */
+body.theme-light {
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.theme-dark {
+  background: var(--black-deep);
+  color: #ffffff;
+}
+
+/* Hero background tuning */
+.hero-bg {
+  filter: brightness(0.82) opacity(0.78);
+}
+body.theme-dark .hero-bg {
+  filter: brightness(0.75) opacity(0.85);
+}
+.hero-overlay {
+  background: linear-gradient(180deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.20) 60%, rgba(255,255,255,0.24) 100%);
+}
+body.theme-dark .hero-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.65) 100%);
+}
+
+/* Hero text readability without dimming the background image */
+body.theme-light .hero-title {
+  /* Make gold title readable on bright areas without any big overlay panel */
+  text-shadow:
+    0 2px 10px rgba(53, 6, 62, 0.35),
+    0 0 22px rgba(255, 255, 255, 0.35);
+  -webkit-text-stroke: 0.6px rgba(53, 6, 62, 0.25);
+}
+
+body.theme-light .hero-main-title {
+  filter: drop-shadow(0 2px 10px rgba(53, 6, 62, 0.22));
+}
+
+/* Hero title/subtitle colors per theme */
+.hero-main-title {
+  color: #35063e;
+}
+body.theme-light .hero-main-title {
+  color: #35063e;
+}
+
+.hero-subtitle-color {
+  color: var(--gold-metallic);
+}
+body.theme-dark .hero-subtitle-color {
+  color: var(--gold-metallic);
+}
+body.theme-light .hero-subtitle-color {
+  color: #35063e;
+}
+
+/* Topline + justice symbol: dark-gold in light theme, gold in dark theme */
+.hero-justice-symbol {
+  color: #b7903a; /* darker gold */
+}
+body.theme-light .hero-justice-symbol {
+  color: #6f5317; /* even darker gold for light theme */
+}
+
+body.theme-light .hero-topline {
+  opacity: 0.95;
+}
+
+/* NHRF topline color */
+.hero-topline {
+  color: #35063e;
+}
+body.theme-dark .hero-topline {
+  color: var(--gold-metallic);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+/* GCMA tag color */
+.hero-gcma-tag {
+  color: #35063e;
+}
+
+/* Readability for violet hero text on dark theme */
+body.theme-dark .hero-main-title,
+body.theme-dark .hero-gcma-tag {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+  -webkit-text-stroke: 0.6px rgba(255, 255, 255, 0.08);
+}
+
+body.theme-light .hero-subtitle {
+  text-shadow:
+    0 2px 10px rgba(255, 255, 255, 0.5),
+    0 2px 14px rgba(53, 6, 62, 0.25);
+}
+
+/* Light theme text visibility overrides */
+body.theme-light .text-gray-300 { color: #2b2738 !important; }
+body.theme-light .text-gray-400 { color: #3a344b !important; }
+body.theme-light .text-gray-500 { color: #4a435d !important; }
+body.theme-light .text-gold-metallic { color: #9b7b2a !important; }
+body.theme-light .text-gold-metallic\/90 { color: rgba(155, 123, 42, 0.9) !important; }
+
 /* Glassmorphism utility classes */
 .glass-card {
   background: rgba(10, 10, 10, 0.6);
@@ -35,6 +144,13 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(201, 169, 97, 0.3);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+body.theme-light .glass-card {
+  background: var(--light-card);
+  border: 1px solid var(--light-card-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  color: var(--light-text);
 }
 
 .glass-card:hover {
@@ -92,6 +208,12 @@ body {
   transition: all 0.3s ease;
 }
 
+body.theme-light .form-input {
+  background: var(--light-input);
+  border: 1px solid var(--light-input-border);
+  color: var(--light-text);
+}
+
 .form-input:focus {
   outline: none;
   border-color: var(--gold-metallic);
@@ -99,8 +221,17 @@ body {
   box-shadow: 0 0 10px rgba(201, 169, 97, 0.2);
 }
 
+body.theme-light .form-input:focus {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(53, 6, 62, 0.1);
+}
+
 .form-input::placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+
+body.theme-light .form-input::placeholder {
+  color: var(--light-placeholder);
 }
 
 /* Select dropdown styling */
@@ -110,10 +241,20 @@ select.form-input {
   cursor: pointer;
 }
 
+body.theme-light select.form-input {
+  background-color: #ffffff !important;
+  color: var(--light-text) !important;
+}
+
 select.form-input option {
   background-color: #000000 !important;
   color: #ffffff !important;
   padding: 0.5rem;
+}
+
+body.theme-light select.form-input option {
+  background-color: #ffffff !important;
+  color: var(--light-text) !important;
 }
 
 select.form-input:focus {

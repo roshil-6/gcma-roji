@@ -65,27 +65,25 @@ export default function Hero() {
       {/* Background Image with Light Overlay - More transparent to show particles */}
       {bgImage && (
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-bg"
           style={{
             backgroundImage: `url(${bgImage})`,
             zIndex: -1,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: 'brightness(0.4) opacity(0.5)',
           }}
         >
-          {/* Dark Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-black/50"></div>
+          {/* Overlay for readability, adjusted per theme via CSS variables */}
+          <div className="absolute inset-0 hero-overlay"></div>
         </div>
       )}
       
       <div className="max-w-6xl mx-auto text-center space-y-6 relative z-10">
-        {/* Logo and Heading - Blended together */}
         <div className="mb-8">
-          <p className="text-sm md:text-base text-gold-metallic/80 uppercase tracking-[0.2em] mb-8 font-medium">
+          <p className="text-sm md:text-base uppercase tracking-[0.2em] mb-8 font-medium hero-topline">
             A Division of the National Human Rights and Humanitarian Federation (NHRF)
           </p>
-          
+
           <div className="flex flex-col items-center space-y-3">
             {/* Justice Symbol with Stripe Design */}
             <div className="mb-4 relative">
@@ -93,7 +91,7 @@ export default function Hero() {
                 width="90" 
                 height="90" 
                 viewBox="0 0 100 100" 
-                className="text-gold-metallic mx-auto"
+                className="mx-auto hero-justice-symbol"
                 fill="currentColor"
               >
                 <defs>
@@ -157,7 +155,7 @@ export default function Hero() {
                 <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-transparent via-gold-metallic to-transparent"></div>
               </div>
               
-              <h1 className="text-lg md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-gold-metallic via-gold-bright via-amber-300 to-gold-metallic bg-clip-text text-transparent leading-tight tracking-tight hero-title relative">
+              <h1 className="text-lg md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight hero-title hero-main-title relative">
                 GLOBAL COUNCIL FOR MIGRATION AWARENESS AND SOCIAL WELFARE
               </h1>
               
@@ -168,12 +166,12 @@ export default function Hero() {
                 <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-transparent via-gold-metallic to-transparent"></div>
               </div>
             </div>
-            <p className="text-xs md:text-sm text-gold-metallic/90 font-semibold tracking-wider">(GCMA)</p>
+            <p className="text-xs md:text-sm font-semibold tracking-wider hero-gcma-tag">(GCMA)</p>
           </div>
         </div>
         
         <div className="space-y-4">
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#4B2C5E] hero-subtitle drop-shadow-lg">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold hero-subtitle hero-subtitle-color drop-shadow-lg">
             "Migration Through the Lens of Human Rights"
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-200 font-light italic tracking-wide hero-tagline">
