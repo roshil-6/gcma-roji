@@ -1,11 +1,9 @@
 import HexagonBackground from '@/components/HexagonBackground'
 import Hero from '@/components/Hero'
-import IntroductionSection from '@/components/IntroductionSection'
-import VisionMissionSection from '@/components/VisionMissionSection'
 import BeliefStatementSection from '@/components/BeliefStatementSection'
-import AboutGCMSection from '@/components/AboutGCMSection'
-import GetInTouchSection from '@/components/GetInTouchSection'
 import WeListenSection from '@/components/WeListenSection'
+import HumanitarianAidSection from '@/components/HumanitarianAidSection'
+import BreakTheSilenceSection from '@/components/BreakTheSilenceSection'
 import Link from 'next/link'
 
 export default function Home() {
@@ -13,12 +11,10 @@ export default function Home() {
     <main className="relative min-h-screen">
       <HexagonBackground />
       <Hero />
-      <IntroductionSection />
-      <VisionMissionSection />
       <BeliefStatementSection />
-      <AboutGCMSection />
-      <GetInTouchSection />
       <WeListenSection />
+      <HumanitarianAidSection />
+      <BreakTheSilenceSection />
       
       {/* Footer with Legal Disclosure */}
       <footer className="relative z-10 py-12 px-4 border-t border-gold-metallic/20">
@@ -26,15 +22,11 @@ export default function Home() {
           <div className="glass-card rounded-lg p-6 max-w-3xl mx-auto">
             <p className="text-gold-metallic font-semibold mb-2">Legal Disclosure</p>
             <p className="text-sm text-gray-300 leading-relaxed">
-              This program of the National Human Rights and Humanitarian Federation (NHRF) 
-              is monitored and conducted through Tonio & Senora Migration Law Firm.
+              GCMA authorizes the National Human Rights and Humanitarian Federation (NHRF) to report migration-related scams and fraudulent practices as a community welfare venture.
             </p>
           </div>
           <p className="text-gray-400 mt-6">
             © {new Date().getFullYear()} Global Council for Migration Awareness and Social Welfare (GCMA)
-          </p>
-          <p className="text-sm text-gray-500">
-            A Division of the National Human Rights and Humanitarian Federation (NHRF)
           </p>
           
           {/* Admin Login Link - Subtle and unobtrusive */}

@@ -42,7 +42,7 @@ export default function BreakTheSilenceSection() {
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             A social initiative focused on improving English communication skills
-            through free, volunteer-based teaching. Empowering individuals through
+            through subsided, volunteer-based teaching. Empowering individuals through
             language and confidence.
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function BreakTheSilenceSection() {
                   I Am a Student
                 </h3>
                 <p className="text-gray-300 text-sm">
-                  Apply to improve your English speaking skills through our free
+                  Apply to improve your English speaking skills through our
                   volunteer-based program.
                 </p>
               </div>
@@ -388,7 +388,7 @@ function TutorForm({ onClose }: { onClose: () => void }) {
     <div className="mt-6">
       <div className="bg-gold-metallic/10 border border-gold-metallic/30 rounded-lg p-4 mb-6">
         <p className="text-gold-metallic font-semibold text-center">
-          ⚠️ Important: Teaching is COMPLETELY FREE as a social service
+          ⚠️ Important: Teaching is carried out as a voluntary social service, with our educators contributing their time and knowledge without compensation to support community development.
         </p>
       </div>
 

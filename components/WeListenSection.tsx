@@ -58,10 +58,7 @@ export default function WeListenSection() {
         
         <div className="glass-card rounded-2xl p-8 md:p-12 text-center">
           <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            At GCMA, we understand that every migrant's journey is unique. We are here to 
-            listen, support, and advocate for your rights. Together, we can create a world 
-            where migration is recognized as a fundamental human right and a force for 
-            positive change.
+            Let us build a better future together—where the dream of migration begins with knowledge, not fear. At GCMA, we believe every journey deserves clarity, honesty, and trust. By promoting awareness and standing firmly against scams and fraudulent practices, we help individuals take their first steps toward migration with confidence. Together, we create pathways rooted in truth, safety, and responsibility, ensuring that hope is guided by information and aspirations are protected from deception.
           </p>
         </div>
       </div>

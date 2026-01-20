@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Link from 'next/link'
 
 export default function GetInTouchSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -26,6 +27,7 @@ export default function GetInTouchSection() {
 
   return (
     <section
+      id="contact"
       ref={sectionRef}
       className="py-12 md:py-16 px-4 relative z-10"
     >
@@ -43,11 +45,14 @@ export default function GetInTouchSection() {
                 target.src = 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&h=900&fit=crop&q=80'
               }}
             />
-            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <Link
+              href="/contact"
+              className="absolute inset-0 bg-black/50 flex items-center justify-center hover:bg-black/40 transition-colors"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-gold-metallic text-center px-4 drop-shadow-lg">
                 Get In Touch
               </h2>
-            </div>
+            </Link>
           </div>
         </div>
         

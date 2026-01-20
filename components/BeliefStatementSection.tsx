@@ -53,20 +53,11 @@ export default function BeliefStatementSection() {
         
         <div className="glass-card rounded-2xl p-8 md:p-12">
           <div className="space-y-6 text-gray-300 leading-relaxed">
-            <p className="text-lg">
-              We believe that <span className="text-gold-metallic font-semibold">migration is a force for good</span>. 
-              It drives economic growth, cultural exchange, and social progress, enriching 
-              communities and nations alike.
+            <p>
+              GCMA believes that meaningful social change begins with access, awareness, and participation. We are committed to creating affordable learning opportunities for government school students to develop English communication skills, empowering them to express their talents with confidence.
             </p>
             <p>
-              GCMA works through awareness, education, and advocacy to ensure that migration 
-              processes are ethical, transparent, and respectful of human dignity. We recognize 
-              that every migrant has a unique story, and every journey deserves to be treated 
-              with fairness and compassion.
-            </p>
-            <p className="text-lg font-medium text-gold-metallic/90">
-              Every migrant deserves dignity, fairness, and compassion — regardless of their 
-              origin, destination, or circumstances.
+              <span className="text-gold-metallic font-semibold">GCMA provides platforms for both adults and children to actively practice social service</span> by participating in community programs that promote awareness, human ethics, dignity, and fundamental rights. <span className="text-gold-metallic font-semibold">By encouraging involvement in charitable initiatives and awareness-driven activities, we nurture responsible citizens and cultivate a culture of compassion, inclusion, and social responsibility.</span>
             </p>
           </div>
         </div>

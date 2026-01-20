@@ -26,6 +26,7 @@ export default function AboutGCMSection() {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
       className="py-12 md:py-16 px-4 relative z-10"
     >
@@ -54,24 +55,13 @@ export default function AboutGCMSection() {
         <div className="glass-card rounded-2xl p-8 md:p-12">
           <div className="space-y-6 text-gray-300 leading-relaxed">
             <p>
-              The Global Council for Migration Awareness and Social Welfare (GCMA) is a 
-              specialized division of the National Human Rights and Humanitarian Federation (NHRF), 
-              dedicated to migrant rights and well-being globally.
+              The Global Council for Migration Awareness and Social Welfare (GCMA) is a humanitarian and welfare-focused body dedicated to supporting individuals who aspire to migrate by ensuring they are informed, aware, and protected from scams, fraud, and exploitation during the migration process.
             </p>
             <p>
-              <span className="text-gold-metallic font-semibold">GCMA is not a commercial migration agency.</span> 
-              We do not process visa applications or provide migration services for profit. 
-              Instead, our focus is on awareness, ethics, and protection.
+              GCMA authorizes the National Human Rights and Humanitarian Federation (NHRF) to report migration-related scams and fraudulent practices as a community welfare venture. This initiative aims to prevent individuals from falling prey to unethical agents, false promises, and illegal migration pathways while promoting transparency and responsible practices.
             </p>
             <p>
-              We work to educate migrants about their rights, support those who have been 
-              victims of fraud or exploitation, and advocate for policies that protect and 
-              empower migrant communities worldwide.
-            </p>
-            <p>
-              Our activities are monitored and conducted through Tonio & Senora Migration 
-              Law Firm, ensuring that all our work adheres to the highest legal and ethical 
-              standards.
+              Our work is grounded in the principles of dignity, fairness, accountability, and public awareness. We focus on education, guidance, and advocacy to help people pursue safe, legal, and informed migration pathways, recognizing migration as a legitimate aspiration and a potential force for positive social and economic development.
             </p>
           </div>
         </div>

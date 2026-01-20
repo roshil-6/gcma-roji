@@ -49,7 +49,7 @@ export default function HumanitarianAidSection() {
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Medical Assistance Card */}
-          <div className="glass-card rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+          <div id="medical-assistance" className="glass-card rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 scroll-mt-20">
             {/* Image Section */}
             <div 
               className="relative h-48 cursor-pointer"
@@ -74,15 +74,15 @@ export default function HumanitarianAidSection() {
                   target.src = 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1600&h=900&fit=crop&auto=format&q=80'
                 }}
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center z-10">
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center z-10">
                 <div className="text-center p-6 w-full flex flex-col items-center justify-center">
                   <div className="w-16 h-16 mb-3 rounded-full bg-gold-metallic/20 flex items-center justify-center border-2 border-gold-metallic/50 backdrop-blur-sm">
                     <svg className="w-8 h-8 text-gold-metallic" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                   </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <h4 className="text-xl font-bold text-gold-metallic drop-shadow-lg">Healthcare Support</h4>
+                  <div className="flex items-center justify-center gap-2 flex-wrap">
+                    <h4 className="text-xl md:text-2xl font-bold text-gold-metallic drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.5)' }}>Healthcare Support</h4>
                     <ExplanationPanel
                       title="Healthcare Support"
                       content="This program supports financially vulnerable patients who need medical assistance. Applications are reviewed using verified doctor and hospital referrals to ensure responsible and fair support. The focus is on dignity, transparency, and genuine care."
@@ -132,7 +132,7 @@ export default function HumanitarianAidSection() {
           </div>
 
           {/* Educational Support Card */}
-          <div className="glass-card rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+          <div id="education-support" className="glass-card rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 scroll-mt-20">
             {/* Image Section */}
             <div 
               className="relative h-48 cursor-pointer"
@@ -157,15 +157,15 @@ export default function HumanitarianAidSection() {
                   target.src = 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&h=900&fit=crop&auto=format&q=80'
                 }}
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center z-10">
                 <div className="text-center p-6 w-full flex flex-col items-center justify-center">
                   <div className="w-16 h-16 mb-3 rounded-full bg-gold-metallic/20 flex items-center justify-center border-2 border-gold-metallic/50 backdrop-blur-sm">
                     <svg className="w-8 h-8 text-gold-metallic" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                   </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <h4 className="text-xl font-bold text-gold-metallic drop-shadow-lg">Education Empowerment</h4>
+                  <div className="flex items-center justify-center gap-2 flex-wrap">
+                    <h4 className="text-xl md:text-2xl font-bold text-gold-metallic drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.5)' }}>Education Empowerment</h4>
                     <ExplanationPanel
                       title="Education Empowerment"
                       content="This initiative supports girl students who require educational assistance to continue their studies. Applications help us understand the student's background and needs so support can be provided responsibly and meaningfully. The goal is empowerment through education."
